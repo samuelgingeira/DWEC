@@ -1,0 +1,69 @@
+let cursos = [
+  {
+    nombre: "Matemáticas",
+    profesor: "Laura",
+    estudiantes: [
+      { nombre: "Ana", calificacion: 8 },
+      { nombre: "Luis", calificacion: 6 },
+      { nombre: "Pedro", calificacion: 9 }
+    ]
+  },
+  {
+    nombre: "Historia",
+    profesor: "Carlos",
+    estudiantes: [
+      { nombre: "Marta", calificacion: 7 },
+      { nombre: "Raúl", calificacion: 5 },
+      { nombre: "Sofía", calificacion: 4 }
+    ]
+  },
+  {
+    nombre: "Inglés",
+    profesor: "María",
+    estudiantes: [
+      { nombre: "Javier", calificacion: 10 },
+      { nombre: "Elena", calificacion: 9 },
+      { nombre: "Diego", calificacion: 8 }
+    ]
+  },
+  {
+    nombre: "Programación",
+    profesor: "Andrés",
+    estudiantes: [
+      { nombre: "Lucía", calificacion: 3 },
+      { nombre: "Pablo", calificacion: 6 },
+      { nombre: "Clara", calificacion: 5 }
+    ]
+  }
+]
+
+let resumenCursos = cursos.map(curso => {
+  let suma = 0
+  curso.estudiantes.forEach(e => {
+    suma += e.calificacion
+  })
+  let promedio = suma / curso.estudiantes.length
+  return {
+    nombreCurso: curso.nombre,
+    promedioCalificaciones: promedio
+  }
+})
+
+console.log("Resumen de cursos:")
+console.log(resumenCursos)
+
+let cursosDestacados = resumenCursos.filter(c => c.promedioCalificaciones >= 7)
+
+console.log("Cursos destacados:")
+console.log(cursosDestacados)
+
+cursosDestacados.forEach(c => {
+  console.log(`📘 El curso ${c.nombreCurso} tiene un promedio de ${c.promedioCalificaciones.toFixed(1)} y es considerado destacado.`)
+})
+
+cursos.forEach(curso => {
+  let hayBajas = curso.estudiantes.some(e => e.calificacion < 4)
+  if (hayBajas) {
+    console.log(`⚠️ Atención: En el curso ${curso.nombre} hay estudiantes con calificaciones muy bajas.`)
+  }
+})
