@@ -1,0 +1,22 @@
+const producto = {
+  nombre: "Laptop",
+  precio: 1200
+};
+
+const cliente = {
+  nombreCliente: "Ana",
+  esPremium: true
+};
+
+const pedido = { ...producto, ...cliente };
+
+console.log("Pedido:", pedido);
+
+const producto2 = {
+  nombre: "Tablet",
+  precio: 600
+};
+
+
+const pedido2 = { ...producto2, ...cliente };
+console.log("Pedido con conflicto:", pedido2);

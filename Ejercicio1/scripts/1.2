@@ -1,0 +1,15 @@
+const coche = {
+  marca: "Kia",
+  modelo: "Carens",
+  año: 2015,
+  estaDisponible: false
+};
+console.table(coche);
+
+const { marca, modelo } = coche;
+console.log(marca);
+console.log(modelo);
+
+coche.estaDisponible = true;
+coche.color = "Rojo";
+delete coche.año;
