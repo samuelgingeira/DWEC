@@ -1,0 +1,11 @@
+let ciudades = ["Madrid", "Buenos Aires", "Tokio", "Nueva York", "París"];
+
+ciudades.push("Roma");
+
+let ciudadesMayusculas = ciudades.map(ciudad => ciudad.toUpperCase());
+
+let ciudadesFiltradas = ciudades.filter(ciudad => ciudad.length > 6);
+
+console.log("Ciudades:", ciudades);
+console.log("Ciudades en mayúsculas:", ciudadesMayusculas);
+console.log("Ciudades con más de 6 caracteres:", ciudadesFiltradas);

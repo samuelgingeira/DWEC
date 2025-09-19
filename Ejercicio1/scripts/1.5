@@ -1,0 +1,37 @@
+
+let estudiantes = [
+  { nombre: "Ana", apellidos: "García López", calificacion: 8, aprobado: true },
+  { nombre: "Luis", apellidos: "Martínez Pérez", calificacion: 4, aprobado: false },
+  { nombre: "Sofía", apellidos: "Fernández Ruiz", calificacion: 6, aprobado: false } // aquí hay un fallo
+]
+
+
+let estudiantesConId = estudiantes.map((e, i) => {
+  return {
+    ...e,
+    id: i + 1
+  }
+})
+
+console.log("Con ID:")
+console.log(estudiantesConId)
+
+let aprobados = estudiantesConId.filter(e => e.calificacion >= 5)
+
+console.log("Aprobados:")
+console.log(aprobados)
+
+aprobados.forEach(e => {
+  console.log(` ${e.nombre}, has aprobado con ${e.calificacion}!`)
+})
+
+
+estudiantesConId.forEach(e => {
+  if (e.calificacion >= 5 && e.aprobado === false) {
+    console.log(` Incoherencia en ${e.nombre}: nota ${e.calificacion}, aprobado = ${e.aprobado}`)
+  }
+  if (e.calificacion < 5 && e.aprobado === true) {
+    console.log(` Incoherencia en ${e.nombre}: nota ${e.calificacion}, aprobado = ${e.aprobado}`)
+  }
+})
+
