@@ -1,0 +1,12 @@
+const usuario = { nombre: "Ana", email: "ana@mail.com" };
+const perfil = { puesto: "Desarrolladora", empresa: "TechCorp" };
+
+
+const empleado = { ...usuario, perfil };
+
+
+const ciudad = empleado.perfil?.direccion?.ciudad;
+
+
+const ciudadFinal = ciudad ?? "Ciudad no especificada";
+console.log("Ciudad:", ciudadFinal);

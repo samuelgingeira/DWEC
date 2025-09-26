@@ -1,0 +1,17 @@
+
+function calcularAreaRectangulo(base = 1, altura = 1) {
+  return base * altura;
+}
+
+
+const calcularAreaTriangulo = function(base = 1, altura = 1) {
+  return (base * altura) / 2;
+};
+
+
+const calcularAreaTrianguloArrow = (base = 1, altura = 1) => (base * altura) / 2;
+
+
+console.log("Área Rectángulo:", calcularAreaRectangulo(5, 10));
+console.log("Área Triángulo (Function Expression):", calcularAreaTriangulo(5, 10));
+console.log("Área Triángulo (Arrow Function):", calcularAreaTrianguloArrow(5, 10));
