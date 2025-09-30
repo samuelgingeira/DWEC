@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DWEC - Ejer_03</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 20px; line-height: 1.5; }
+    header { margin-bottom: 1.5rem; }
+    section { margin-bottom: 2rem; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    pre { background:#f7f7f7; padding:12px; border-radius:6px; overflow:auto }
+    img.prompt { max-width: 100%; height: auto; border: 1px solid #ccc; margin-top: 0.5rem; }
+    .small { font-size: .9rem; color:#555; }
+    .log { background:#111; color:#0f0; padding:10px; border-radius:6px; font-family: monospace; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DWEC — Ejercicios Ejer_03</h1>
+    <p class="small">HTML común que carga los scripts de cada ejercicio. Abre la consola del navegador (F12) para ver los resultados.</p>
+  </header>
+
+  <section>
+    <h2>Prompts usados a la IA (coloca aquí tus capturas)</h2>
+    <p class="small">Coloca las capturas de pantalla de los prompts que usaste y las respuestas de la IA en la carpeta <code>images/</code> y nómbralas como en la estructura.</p>
+
+    <h3>Playlist (prompt + resultado)</h3>
+    <img class="prompt" src="images/prompt-playlist.png" alt="Captura prompt playlist (reemplaza con tu imagen)">
+
+    <h3>Biblioteca (prompt + resultado)</h3>
+    <img class="prompt" src="images/prompt-biblioteca.png" alt="Captura prompt biblioteca (reemplaza con tu imagen)">
+
+    <h3>Empleados (prompt + resultado)</h3>
+    <img class="prompt" src="images/prompt-empleados.png" alt="Captura prompt empleados (reemplaza con tu imagen)">
+  </section>
+
+  <section>
+    <h2>Ejercicios</h2>
+    <p class="small">Los scripts están en <code>js/</code>. Si el navegador bloquea módulos locales (file://), sirve la carpeta con un servidor local (p. ej. <code>npx http-server</code> o Live Server en VSCode).</p>
+
+    <ul>
+      <li>ejercicio-01.js — Lista de reproducción y impresión con forEach</li>
+      <li>ejercicio-02.js — Filtrar canciones > 180s y map</li>
+      <li>biblioteca.js + app.js — Módulo biblioteca con funciones (agregar, obtener, buscar, eliminar, calcular páginas, ordenar, some/every)</li>
+      <li>empleados/empleados.js + empleados/main.js — Sistema de gestión de empleados</li>
+    </ul>
+  </section>
+
+  <script type="module" src="./js/ejercicio-01.js"></script>
+  <script type="module" src="./js/ejercicio-02.js"></script>
+  <script type="module" src="./js/app.js"></script>
+  <script type="module" src="./js/empleados/main.js"></script>
+</body>
+</html>
