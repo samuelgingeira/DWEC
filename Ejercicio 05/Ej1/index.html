@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ej1 - Galería</title>
+  <style>
+    #galeria { max-width: 800px; margin: 20px auto; text-align: center; }
+    #imagen-principal { width: 100%; max-height: 450px; object-fit: cover; border: 2px solid #ccc; border-radius: 6px; }
+    .miniaturas { display:flex; gap:8px; margin-top:10px; justify-content:center; }
+    .miniatura { width: 120px; height: 70px; object-fit:cover; cursor:pointer; border:2px solid transparent; border-radius:4px; }
+    .miniatura.activa { border-color: #f39c12; box-shadow: 0 0 6px rgba(243,156,18,.4); }
+  </style>
+</head>
+<body>
+  <div id="galeria">
+    <img id="imagen-principal" src="https://picsum.photos/id/1018/800/450" alt="Principal"/>
+    <div class="miniaturas">
+      <img class="miniatura activa" src="https://picsum.photos/id/1018/400/225" alt="mini0" onclick="cambiarImagenPrincipal(0); resaltarMiniatura(0);">
+      <img class="miniatura" src="https://picsum.photos/id/1024/400/225" alt="mini1" onclick="cambiarImagenPrincipal(1); resaltarMiniatura(1);">
+      <img class="miniatura" src="https://picsum.photos/id/1025/400/225" alt="mini2" onclick="cambiarImagenPrincipal(2); resaltarMiniatura(2);">
+      <img class="miniatura" src="https://picsum.photos/id/1035/400/225" alt="mini3" onclick="cambiarImagenPrincipal(3); resaltarMiniatura(3);">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ej3 - Validación</title>
+<style>
+  label, input { display:block; margin:8px 0; }
+  #informe-errores p { margin:4px 0; color: #c0392b; }
+  #informe-errores p.valido { color: #27ae60; }
+</style>
+</head>
+<body>
+  <form id="mi-form" onsubmit="event.preventDefault(); generarInformeDeValidacion();">
+    <label>Nombre: <input type="text" id="nombre" /></label>
+    <label>Email: <input type="email" id="email" /></label>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div id="informe-errores"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

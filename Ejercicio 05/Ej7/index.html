@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ej7 - Carrito</title>
+<style>
+  .producto, .carrito li { display:flex; justify-content:space-between; padding:6px; border-bottom:1px solid #eee; }
+  .producto button, .carrito button { margin-left:8px; }
+  #total { font-weight:bold; }
+</style>
+</head>
+<body>
+  <h3>Productos</h3>
+  <ul id="productos">
+    <li class="producto" data-price="9.99">Camiseta <span>9.99€</span> <button class="add">Añadir al carrito</button></li>
+    <li class="producto" data-price="14.5">Gorra <span>14.50€</span> <button class="add">Añadir al carrito</button></li>
+    <li class="producto" data-price="29.99">Sudadera <span>29.99€</span> <button class="add">Añadir al carrito</button></li>
+  </ul>
+
+  <h3>Carrito</h3>
+  <ul id="carrito" class="carrito"></ul>
+
+  <p>Total: <span id="total">0.00€</span></p>
+
+  <script src="script.js"></script>
+</body>
+</html>

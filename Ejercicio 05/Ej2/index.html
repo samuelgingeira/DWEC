@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ej2 - Acordeón FAQ</title>
+<style>
+  .oculto { display:none; }
+  li { margin-bottom:10px; }
+  h2 { cursor:pointer; margin:0; background:#eee; padding:8px; border-radius:4px; }
+  p { margin:6px 0 0 0; padding:8px; background:#fafafa; border-left:4px solid #ddd; }
+</style>
+</head>
+<body>
+  <ul id="faq">
+    <li>
+      <h2 onclick="revelarRespuesta(this)">¿Qué es JavaScript?</h2>
+      <p class="oculto">JavaScript es un lenguaje de programación interpretado que se ejecuta en navegadores y en servidores.</p>
+    </li>
+    <li>
+      <h2 onclick="revelarRespuesta(this)">¿Qué es el DOM?</h2>
+      <p class="oculto">El DOM es la representación en objetos de la estructura HTML de la página.</p>
+    </li>
+    <li>
+      <h2 onclick="revelarRespuesta(this)">¿Qué es una función?</h2>
+      <p class="oculto">Una función es un bloque de código reutilizable que realiza una tarea concreta.</p>
+    </li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+</html>

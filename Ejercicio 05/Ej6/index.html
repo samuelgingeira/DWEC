@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ej6 - Tabs</title>
+<style>
+  .tabs { display:flex; gap:8px; margin-bottom:10px; }
+  .tabs button { padding:8px 12px; cursor:pointer; }
+  .contenido > div { padding:12px; border:1px solid #ddd; border-radius:6px; }
+  .oculto { display:none; }
+</style>
+</head>
+<body>
+  <div class="tabs" id="tabs">
+    <button data-id="tab1">Pestaña 1</button>
+    <button data-id="tab2">Pestaña 2</button>
+    <button data-id="tab3">Pestaña 3</button>
+  </div>
+
+  <div class="contenido" id="contenido">
+    <div id="tab1">Contenido de la pestaña 1</div>
+    <div id="tab2" class="oculto">Contenido de la pestaña 2</div>
+    <div id="tab3" class="oculto">Contenido de la pestaña 3</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
