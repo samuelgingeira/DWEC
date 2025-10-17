@@ -1,0 +1,4 @@
+body{font-family:Arial;margin:20px}
+.contenedor{width:600px;height:320px;border:2px dashed #bbb;position:relative;overflow:hidden;background:#fafafa}
+.arrastrable{width:80px;height:50px;background:#2b7cff;color:white;display:flex;align-items:center;justify-content:center;border-radius:6px;position:absolute;left:20px;top:20px;cursor:grab;user-select:none}
+.arrastrable.dragging{cursor:grabbing;opacity:0.9}

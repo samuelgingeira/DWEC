@@ -1,0 +1,5 @@
+body{font-family:Arial;margin:20px}
+form{margin-bottom:12px;display:flex;gap:8px;align-items:center}
+table{border-collapse:collapse;width:100%;max-width:600px}
+th,td{border:1px solid #ddd;padding:8px;text-align:left}
+thead{background:#f0f0f0}

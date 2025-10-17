@@ -1,0 +1,2 @@
+body{font-family:system-ui;margin:24px}
+button[disabled]{opacity:0.6;cursor:not-allowed}

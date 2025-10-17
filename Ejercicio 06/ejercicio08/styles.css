@@ -1,0 +1,5 @@
+body{font-family:Arial;margin:20px}
+ul{list-style:none;padding:0;max-width:480px}
+li{padding:8px;border:1px solid #eee;display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.controls button{margin-left:6px}
+button[disabled]{opacity:0.6;cursor:not-allowed}
