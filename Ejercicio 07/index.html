@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Eventos en JavaScript</title>
+    <link rel="stylesheet" href="styles/ejercicios.css">
+</head>
+<body>
+
+    <header>
+        <h1>Ejercicios de Eventos en JavaScript</h1>
+        <p>Abre la consola del navegador (F12) para ver los resultados de los ejercicios.</p>
+    </header>
+
+    <main>
+        <!-- Ejercicio 1 y 4 -->
+        <section>
+            <h2>Ejercicio 1: Propagación de Eventos (Bubbling)</h2>
+            <p>Añade un único event listener al contenedor exterior (`id="outer-box"`). Cuando se haga clic en cualquiera de los contenedores interiores, el contenedor que fue directamente pulsado debe cambiar su fondo a color `coral`. En la consola, muestra el `id` del elemento pulsado (`event.target`) y el `id` del elemento que gestiona el evento (`event.currentTarget`).</p>
+            
+            <h2>Ejercicio 4: Detener la Propagación (stopPropagation)</h2>
+            <p>Modifica el ejercicio anterior. Ahora, si se hace clic en `middle-box`, este debe cambiar de color, pero el evento no debe propagarse al `outer-box` (es decir, `outer-box` no debe ejecutar su listener).</p>
+
+            <div id="outer-box" class="box">
+                <strong>Outer</strong>
+                <div id="middle-box" class="box">
+                    <strong>Middle</strong>
+                    <div id="inner-box" class="box">
+                        <strong>Inner</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ejercicio 2 -->
+        <section>
+            <h2>Ejercicio 2: Prevenir Comportamiento por Defecto (preventDefault)</h2>
+            <p>Haz que al hacer clic en el siguiente enlace, se evite la navegación. En su lugar, muestra un mensaje en la consola que diga "Navegación prevenida".</p>
+            <a id="test-link" href="https://www.google.com">Enlace de prueba a Google</a>
+        </section>
+
+        <!-- Ejercicio 3 -->
+        <section>
+            <h2>Ejercicio 3: Evento Scroll y Clases</h2>
+            <p>El botón "Volver Arriba" de abajo está inicialmente oculto. Haz que aparezca cuando el usuario haya hecho scroll más de 250px hacia abajo.</p>
+            <p>Al hacer clic en él, la página debe volver al principio de forma suave.</p>
+            <p>Para ello investiga el método <code>window.scrollTo()</code></p>
+        </section>
+
+        <!-- Ejercicio 5 -->
+        <section>
+            <h2>Ejercicio 5: Eventos Personalizados (CustomEvent)</h2>
+            <p>Al pulsar el botón "Lanzar Notificación", se debe lanzar un evento personalizado llamado `notification`. Este evento debe llevar consigo un objeto `detail` con un mensaje y la fecha actual. Un listener en el <code> body </code> debe escuchar este evento y mostrar el mensaje recibido en el recuadro de abajo.</p>
+            <button id="notification-btn">Lanzar Notificación</button>
+            <div id="notification-area">
+                <p>Esperando notificaciones...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="page-filler"></div>
+
+    <button id="back-to-top" class="hidden">Volver Arriba</button>
+
+    <!-- Script para que los alumnos trabajen -->
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>
