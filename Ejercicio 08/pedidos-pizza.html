@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedido de Pizza</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .precio-total {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 10px;
+            background: #f2f2f2;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Configurador de Pizza</h1>
+
+    <h3>Tamaño</h3>
+    <label><input type="radio" name="tamano" value="10" checked> Pequeña (10€)</label><br>
+    <label><input type="radio" name="tamano" value="12"> Mediana (12€)</label><br>
+    <label><input type="radio" name="tamano" value="15"> Grande (15€)</label><br>
+
+    <h3>Ingredientes Extra</h3>
+    <label><input type="checkbox" class="ingrediente" value="1"> Extra de queso (+1€)</label><br>
+    <label><input type="checkbox" class="ingrediente" value="1.5"> Pepperoni (+1.5€)</label><br>
+    <label><input type="checkbox" class="ingrediente" value="0.75"> Champiñones (+0.75€)</label><br>
+    <label><input type="checkbox" class="ingrediente" value="1"> Piña (+1€)</label><br>
+
+    <h3>Masa</h3>
+    <select id="masa">
+        <option value="0">Fina (0€)</option>
+        <option value="1">Normal (+1€)</option>
+        <option value="2.5">Rellena de queso (+2.5€)</option>
+    </select>
+
+    <div class="precio-total" id="precioTotal">
+        Precio Total: 10.00 €
+    </div>
+
+    <button id="btnPedir">Realizar Pedido</button>
+
+    <script>
+        function actualizarPrecio() {
+            let total = 0;
+
+            const radioTamano = document.querySelector('input[name="tamano"]:checked');
+            total += parseFloat(radioTamano.value);
+
+            const masa = document.getElementById("masa");
+            total += parseFloat(masa.value);
+
+            const ingredientes = document.querySelectorAll('.ingrediente');
+            ingredientes.forEach(ing => {
+                if (ing.checked) total += parseFloat(ing.value);
+            });
+
+            document.getElementById("precioTotal").textContent =
+                "Precio Total: " + total.toFixed(2) + " €";
+        }
+
+        document.querySelectorAll('input, select').forEach(el => {
+            el.addEventListener('change', actualizarPrecio);
+        });
+
+        document.getElementById("btnPedir").addEventListener('click', function() {
+            const radioTamano = document.querySelector('input[name="tamano"]:checked');
+            const masa = document.getElementById("masa").options[document.getElementById("masa").selectedIndex].text;
+
+            let ingSeleccionados = [];
+            document.querySelectorAll('.ingrediente').forEach(ing => {
+                if (ing.checked) ingSeleccionados.push(ing.parentNode.textContent.trim());
+            });
+
+            const precioFinal = document.getElementById("precioTotal").textContent;
+
+            alert(
+                "Pedido realizado:\n\n" +
+                "Tamaño: " + radioTamano.parentNode.textContent.trim() + "\n" +
+                "Masa: " + masa + "\n" +
+                "Ingredientes extra:\n- " + (ingSeleccionados.length ? ingSeleccionados.join("\n- ") : "Ninguno") + "\n\n" +
+                precioFinal
+            );
+        });
+
+        actualizarPrecio();
+    </script>
+
+</body>
+</html>
