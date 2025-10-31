@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pop-up</title>
+</head>
+<body>
+
+  <h2>¡Hola! Soy un pop-up 😄</h2>
+  <button id="closeBtn">Cerrar</button>
+  <button id="sayHello">Saludar a la ventana principal</button>
+
+  <script>
+    const btnClose = document.getElementById("closeBtn");
+    const btnHello = document.getElementById("sayHello");
+
+    btnClose.addEventListener("click", () => {
+      window.close();
+    });
+
+    btnHello.addEventListener("click", () => {
+      if (window.opener && !window.opener.closed) {
+        window.opener.document.getElementById("title").textContent = "El pop-up te saluda 👋";
+      }
+    });
+  </script>
+
+</body>
+</html>
