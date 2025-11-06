@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inventario>
+    <item id="AGUA01" unidad="litros">
+        <nombre>Agua Potable</nombre>
+        <cantidad>500</cantidad>
+        <consumo>4</consumo>
+    </item>
+    <item id="COM01" unidad="kg">
+        <nombre>Comida Deshidratada</nombre>
+        <cantidad>250</cantidad>
+        <consumo>2</consumo>
+    </item>
+    <item id="O2B01" unidad="litros">
+        <nombre>Oxígeno Botellas</nombre>
+        <cantidad>10000</cantidad>
+        <consumo>200</consumo>
+    </item>
+    <item id="MED01" unidad="unidades">
+        <nombre>Kit Médico</nombre>
+        <cantidad>10</cantidad>
+        <consumo>0.1</consumo>
+    </item>
+</inventario>

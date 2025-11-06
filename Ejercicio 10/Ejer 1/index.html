@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Panel Estación Espacial</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container py-4">
+    <h1 class="mb-4">Panel de Datos - Estación Espacial</h1>
+
+    <div class="card mb-3">
+      <div class="card-header">Soporte Vital</div>
+      <div class="card-body" id="soporte-vital">
+        <p class="text-muted">Cargando datos de soporte vital...</p>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="card-header">Gestión de Inventario</div>
+      <div class="card-body">
+        <form id="form-inventario" class="row g-3 align-items-end">
+          <div class="col-md-6">
+            <label for="select-item" class="form-label">Selecciona un ítem</label>
+            <select id="select-item" class="form-select">
+              <option value="">Cargando inventario...</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Cantidad a calcular</label>
+            <input id="input-cantidad" type="number" class="form-control" min="0" placeholder="Cantidad (opcional)">
+            <div class="form-text">Si lo deja vacío usará la cantidad disponible en el inventario.</div>
+          </div>
+          <div class="col-md-3">
+            <button id="btn-calcular" type="button" class="btn btn-primary w-100">Calcular Autonomía</button>
+          </div>
+        </form>
+
+        <hr>
+
+        <div id="detalle-item" class="mb-3">
+        </div>
+
+        <div id="resultado-autonomia">
+        </div>
+      </div>
+    </div>
+
+    <div id="mensajes" class="mt-2"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
