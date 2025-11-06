@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<documento>
+    <id>2</id>
+    <titulo>Constitución de los EE.UU.</titulo>
+    <fecha>1787</fecha>
+    <imagen>img/doc2.jpg</imagen>
+    <descripcion>Base legal y política de EE.UU.</descripcion>
+    <siguiente>documento_3.xml</siguiente>
+    <anterior>documento_1.xml</anterior>
+</documento>

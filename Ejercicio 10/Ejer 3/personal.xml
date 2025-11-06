@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<agentes>
+    <agente codigo="007">
+        <nombre>James Bond</nombre>
+        <clave>skyfall</clave>
+    </agente>
+    <agente codigo="009">
+        <nombre>Ethan Hunt</nombre>
+        <clave>fallout</clave>
+    </agente>
+    <agente codigo="A12">
+        <nombre>Ada Lovelace</nombre>
+        <clave>analiza</clave>
+    </agente>
+</agentes>

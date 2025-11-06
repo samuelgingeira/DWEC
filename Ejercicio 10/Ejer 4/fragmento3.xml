@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manuscrito>
+  <texto>El final pide una interacción directa con este pequeño span.</texto>
+  <pista>Busca un <code>span</code> en el texto del manuscrito.</pista>
+  <selector_solucion>main span.cursor-pointer</selector_solucion>
+  <letra_clave>A</letra_clave>
+  <siguiente_fragmento>null</siguiente_fragmento>
+</manuscrito>

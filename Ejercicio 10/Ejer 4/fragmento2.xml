@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manuscrito>
+  <texto>Busca la palabra destacada en la lista: la más antigua entre las entradas.</texto>
+  <pista>Revisa la lista dentro del main (items con &lt;strong&gt;).</pista>
+  <selector_solucion>main ul li strong</selector_solucion>
+  <letra_clave>S</letra_clave>
+  <siguiente_fragmento>fragmento3.xml</siguiente_fragmento>
+</manuscrito>

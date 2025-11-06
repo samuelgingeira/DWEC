@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manuscrito>
+  <texto>El primer secreto se oculta a simple vista, en la palabra más importante de nuestro lema.</texto>
+  <pista>El lema de la página está en la cabecera.</pista>
+  <selector_solucion>header h2 strong</selector_solucion>
+  <letra_clave>V</letra_clave>
+  <siguiente_fragmento>fragmento2.xml</siguiente_fragmento>
+</manuscrito>

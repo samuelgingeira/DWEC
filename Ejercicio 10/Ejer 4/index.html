@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manuscrito Cifrado</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .alfabeto { display:flex; flex-wrap:wrap; gap:0.5rem; }
+    .letra { width:40px; height:40px; display:flex; align-items:center; justify-content:center;
+             border:1px solid #ddd; border-radius:6px; cursor:pointer; user-select:none; }
+    .letra.selected { background:#0d6efd; color:white; border-color:#0d6efd; }
+    .flash-fail { animation: flashRed 0.5s ease 0s 3; }
+    @keyframes flashRed {
+      0% { background: rgba(255,0,0,0.6); }
+      50% { background: rgba(255,0,0,0.2); }
+      100% { background: transparent; }
+    }
+    main .texto-juego { line-height:1.6; }
+    .cursor-pointer { cursor:pointer; }
+  </style>
+</head>
+<body class="bg-light">
+
+  <div class="container py-4">
+    <h1 class="mb-4">El Manuscrito Cifrado</h1>
+
+    <div class="row">
+      <div class="col-md-8">
+        <header class="mb-3">
+          <h2>Por la Ciencia y la <strong>Verdad</strong></h2>
+          <p class="text-muted small">Lema de la Academia del Manuscrito.</p>
+        </header>
+
+        <main class="card mb-3 p-3 texto-juego">
+          <p>En este manuscrito encontrarás pistas en <strong>palabras</strong>, <em>frases</em> y listas.</p>
+          <p class="lead">La esencia está oculta en <strong>Verdad</strong> y en otras palabras fuertes.</p>
+
+          <ul>
+            <li><strong>Secreto</strong> antiguo</li>
+            <li><em>Misterio</em> por resolver</li>
+            <li>Palabra clave en el <strong>header</strong></li>
+          </ul>
+
+          <p>También puedes encontrar claves dentro de <span class="cursor-pointer">este span</span> o en <strong class="nota">notas</strong>.</p>
+        </main>
+
+        <div class="card p-3 mb-3">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div>
+              <button id="btn-empezar" class="btn btn-success">Empezar</button>
+              <button id="btn-reiniciar" class="btn btn-outline-secondary ms-2">Reiniciar</button>
+            </div>
+            <div>
+              <span class="me-3">Fragmento actual: <span id="frag-nombre">—</span></span>
+              <span>Intentos: <span id="contador">0</span></span>
+            </div>
+          </div>
+
+          <div id="panel-fragmento">
+            <h5 id="texto-fragmento">Pulsa <strong>Empezar</strong> para cargar el primer fragmento.</h5>
+            <p id="pista-fragmento" class="text-muted"></p>
+          </div>
+        </div>
+
+        <div id="mensajes"></div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card p-3 mb-3">
+          <h5>Alfabeto (selecciona una letra)</h5>
+          <div id="alfabeto" class="alfabeto mt-2">
+          </div>
+          <p class="mt-2 text-muted small">Selecciona la letra correcta antes de hacer clic en el elemento objetivo.</p>
+        </div>
+
+        <div class="card p-3">
+          <h6>Instrucciones</h6>
+          <ol class="small">
+            <li>Pulsa <strong>Empezar</strong> para cargar un fragmento.</li>
+            <li>Lee la pista y selecciona una letra del alfabeto.</li>
+            <li>Haz clic en la palabra/elemento que creas que es la clave.</li>
+            <li>Si aciertas con la letra + elemento, se carga el siguiente fragmento.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

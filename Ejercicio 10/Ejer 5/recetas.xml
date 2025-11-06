@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<recetas>
+    <aleacion>
+        <base>Hierro</base>
+        <mezcla>Carbono</mezcla>
+        <resultado>Acero</resultado>
+        <descripcion>Una aleación fuerte y versátil, usada durante siglos.</descripcion>
+    </aleacion>
+
+    <aleacion>
+        <base>Cobre</base>
+        <mezcla>Estaño</mezcla>
+        <resultado>Bronce</resultado>
+        <descripcion>Más duro que el cobre, revolucionó la Edad de los Metales.</descripcion>
+    </aleacion>
+
+    <aleacion>
+        <base>Aluminio</base>
+        <mezcla>Cobre</mezcla>
+        <resultado>Aluminio-cobre</resultado>
+        <descripcion>Aumenta la resistencia mecánica y la conductividad.</descripcion>
+    </aleacion>
+
+    <aleacion>
+        <base>Hierro</base>
+        <mezcla>Cromo</mezcla>
+        <resultado>Acero Inoxidable</resultado>
+        <descripcion>Resistente a la corrosión; ideal para utensilios y estructuras.</descripcion>
+    </aleacion>
+
+    <aleacion>
+        <base>Níquel</base>
+        <mezcla>Cromo</mezcla>
+        <resultado>Inconel</resultado>
+        <descripcion>Superaleación para altas temperaturas y ambientes corrosivos.</descripcion>
+    </aleacion>
+
+    <aleacion>
+        <base>Cobre</base>
+        <mezcla>Aluminio</mezcla>
+        <resultado>Cu-Al (Duralumin)</resultado>
+        <descripcion>Aumenta dureza y resistencia; usado en aeronáutica.</descripcion>
+    </aleacion>
+</recetas>
