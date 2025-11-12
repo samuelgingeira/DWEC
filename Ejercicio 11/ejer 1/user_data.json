@@ -1,0 +1,21 @@
+{
+  "id": "USER001",
+  "personalInfo": {
+    "firstName": "Ana",
+    "lastName": "García Pérez",
+    "email": "ana.garcia@example.com",
+    "phone": "+34 600 123 456"
+  },
+  "address": {
+    "street": "Calle Mayor 123",
+    "city": "Madrid",
+    "zipCode": "28001",
+    "country": "España"
+  },
+  "preferences": {
+    "theme": "dark",
+    "notifications": true,
+    "language": "es"
+  },
+  "hobbies": ["Lectura", "Senderismo", "Cocina"]
+}

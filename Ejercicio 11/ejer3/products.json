@@ -1,0 +1,57 @@
+[
+  {
+    "id": "PROD001",
+    "name": "Smartphone X",
+    "description": "Potente smartphone con cámara de 108MP y batería de larga duración.",
+    "price": 699.99,
+    "category": "Electrónica",
+    "brand": "TechCorp",
+    "rating": 4.5,
+    "stock": 50,
+    "imageUrl": "https://example.com/smartphone_x.jpg"
+  },
+  {
+    "id": "PROD002",
+    "name": "Laptop UltraBook",
+    "description": "Diseño ligero y alto rendimiento para profesionales.",
+    "price": 1299.99,
+    "category": "Electrónica",
+    "brand": "InnovatePC",
+    "rating": 4.8,
+    "stock": 25,
+    "imageUrl": "https://example.com/laptop_ultrabook.jpg"
+  },
+  {
+    "id": "PROD003",
+    "name": "Cafetera Espresso",
+    "description": "Prepara tu café favorito en minutos con calidad profesional.",
+    "price": 129.00,
+    "category": "Hogar",
+    "brand": "HomeEssentials",
+    "rating": 4.2,
+    "stock": 100,
+    "imageUrl": "https://example.com/cafetera_espresso.jpg"
+  },
+  {
+    "id": "PROD004",
+    "name": "Televisor 4K 55”",
+    "description": "Disfruta de tus series favoritas en resolución 4K Ultra HD.",
+    "price": 899.99,
+    "category": "Electrónica",
+    "brand": "VisionTech",
+    "rating": 4.6,
+    "stock": 40,
+    "imageUrl": "https://example.com/tv_4k.jpg"
+  },
+  {
+    "id": "PROD005",
+    "name": "Aspiradora Sin Cable",
+    "description": "Ligera, potente y sin cables. Ideal para hogares modernos.",
+    "price": 199.00,
+    "category": "Hogar",
+    "brand": "CleanMaster",
+    "rating": 4.3,
+    "stock": 75,
+    "imageUrl": "https://example.com/aspiradora_sin_cable.jpg"
+  }
+]
