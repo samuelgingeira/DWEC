@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Buscar Usuario y Pedidos</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Búsqueda de Usuario y sus Pedidos</h1>
+    <form id="buscarForm" class="buscar-form">
+      <label for="emailInput">Email del usuario</label>
+      <input id="emailInput" type="email" placeholder="usuario@ejemplo.com" required />
+      <button type="submit">Buscar</button>
+    </form>
+    <div id="estado" class="estado"></div>
+    <div id="resultados" class="resultados"></div>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

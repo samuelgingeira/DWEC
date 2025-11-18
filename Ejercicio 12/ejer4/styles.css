@@ -1,0 +1,10 @@
+body{font-family:system-ui,Segoe UI,Roboto,Arial;background:#f5f7fa;color:#222;padding:20px}
+.container{max-width:1000px;margin:0 auto}
+.estado{margin-bottom:12px;color:#555}
+.panel{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.card{background:white;padding:12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.card h3{margin:0 0 8px 0;font-size:1.05rem}
+.card p{margin:4px 0;color:#444}
+.detalles{margin-top:8px;padding-top:8px;border-top:1px dashed #eee}
+.detalles ul{padding-left:18px;margin:6px 0}
+.total{font-weight:700;margin-top:8px}

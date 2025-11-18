@@ -1,0 +1,42 @@
+[
+  {
+    "id": 101,
+    "nombre": "Teclado Mecánico RGB",
+    "sku": "TEC-RGB-001",
+    "precio": 89.99,
+    "stock": 45,
+    "categoria": "Periféricos"
+  },
+  {
+    "id": 102,
+    "nombre": "Monitor Curvo 27 pulgadas",
+    "sku": "MON-CUR-027",
+    "precio": 299.5,
+    "stock": 25,
+    "categoria": "Monitores"
+  },
+  {
+    "id": 103,
+    "nombre": "Ratón Inalámbrico Ergonómico",
+    "sku": "RAT-ERG-003",
+    "precio": 45.0,
+    "stock": 80,
+    "categoria": "Periféricos"
+  },
+  {
+    "id": 104,
+    "nombre": "Silla Gaming Pro",
+    "sku": "SIL-GAM-PRO",
+    "precio": 250.0,
+    "stock": 15,
+    "categoria": "Mobiliario"
+  },
+  {
+    "id": 105,
+    "nombre": "Webcam HD 1080p",
+    "sku": "CAM-HD-1080",
+    "precio": 65.75,
+    "stock": 60,
+    "categoria": "Periféricos"
+  }
+]

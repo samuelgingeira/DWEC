@@ -1,0 +1,10 @@
+body{font-family:system-ui,Segoe UI,Roboto,Arial;background:#f4f6f8;color:#222;padding:20px}
+.container{max-width:800px;margin:0 auto}
+.buscar-form{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+.buscar-form input{flex:1;padding:8px;border-radius:6px;border:1px solid #ccc}
+.buscar-form button{padding:8px 12px;border-radius:6px;border:none;background:#1976d2;color:white;cursor:pointer}
+.estado{margin:8px 0;color:#666}
+.resultados{background:white;padding:12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.resultados h2{margin-top:0}
+.pedido{border-top:1px solid #eee;padding:8px 0}
+.error{color:#b00020}

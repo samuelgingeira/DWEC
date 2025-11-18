@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Visualizador de Productos</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Visualizador de Productos</h1>
+    <div class="controls">
+      <label for="categoriaSelect">Filtrar por categoría:</label>
+      <select id="categoriaSelect"><option>Cargando...</option></select>
+      <div class="sort-buttons">
+        <button id="sortAsc">Ordenar de Menor a Mayor Precio</button>
+        <button id="sortDesc">Ordenar de Mayor a Menor Precio</button>
+      </div>
+    </div>
+    <div id="mensaje" class="mensaje">Cargando...</div>
+    <div id="productosContainer" class="productos-grid"></div>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

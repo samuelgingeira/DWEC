@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Panel de Ventas - Dashboard</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Panel de Ventas - Dashboard</h1>
+    <div id="estado" class="estado">Cargando datos maestros...</div>
+
+    <section class="controls">
+      <label for="usuarioSelect">Selecciona un usuario:</label>
+      <select id="usuarioSelect" disabled>
+        <option>Cargando...</option>
+      </select>
+    </section>
+
+    <section id="dashboard" class="dashboard" aria-live="polite">
+      <div id="usuarioPanel" class="card usuario-panel"></div>
+      <div id="resumenPanel" class="card resumen-panel"></div>
+      <div id="pedidosPanel" class="pedidos-panel"></div>
+    </section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

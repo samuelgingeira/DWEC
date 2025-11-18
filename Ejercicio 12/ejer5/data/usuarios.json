@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nombre": "Carlos Santana",
+    "email": "carlos.santana@example.com",
+    "fechaRegistro": "2023-01-15"
+  },
+  {
+    "id": 2,
+    "nombre": "Ana López",
+    "email": "ana.lopez@example.com",
+    "fechaRegistro": "2023-02-20"
+  },
+  {
+    "id": 3,
+    "nombre": "Pedro Martínez",
+    "email": "pedro.martinez@example.com",
+    "fechaRegistro": "2023-03-10"
+  },
+  {
+    "id": 4,
+    "nombre": "Laura Fernández",
+    "email": "laura.fernandez@example.com",
+    "fechaRegistro": "2023-04-05"
+  },
+  {
+    "id": "u_extra_01",
+    "nombre": "Lucía Fernández",
+    "email": "lucia.fernandez@example.com",
+    "fechaRegistro": "2024-09-12"
+  },
+  {
+    "id": "u_extra_02",
+    "nombre": "Diego Morales",
+    "email": "diego.morales@example.com",
+    "fechaRegistro": "2025-02-05"
+  }
+]

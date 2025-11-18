@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crear Nuevo Producto</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Crear Nuevo Producto</h1>
+    <form id="productoForm" novalidate>
+      <div class="field">
+        <label for="nombre">Nombre *</label>
+        <input id="nombre" name="nombre" type="text" required />
+        <div class="error" id="error-nombre"></div>
+      </div>
+      <div class="field">
+        <label for="sku">SKU *</label>
+        <input id="sku" name="sku" type="text" minlength="5" required />
+        <div class="info" id="sku-info"></div>
+        <div class="error" id="error-sku"></div>
+      </div>
+      <div class="field">
+        <label for="precio">Precio (€) *</label>
+        <input id="precio" name="precio" type="number" step="0.01" required />
+        <div class="error" id="error-precio"></div>
+      </div>
+      <div class="field">
+        <label for="stock">Stock *</label>
+        <input id="stock" name="stock" type="number" step="1" required />
+        <div class="error" id="error-stock"></div>
+      </div>
+      <div class="field">
+        <label for="categoria">Categoría *</label>
+        <input id="categoria" name="categoria" type="text" required />
+        <div class="error" id="error-categoria"></div>
+      </div>
+      <div class="actions">
+        <button id="guardarBtn" type="submit" disabled>Guardar</button>
+        <button id="limpiarBtn" type="button">Limpiar</button>
+      </div>
+      <div id="mensaje" class="mensaje" aria-live="polite"></div>
+    </form>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

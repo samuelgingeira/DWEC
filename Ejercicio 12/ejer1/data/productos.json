@@ -1,0 +1,66 @@
+[
+  {
+    "id": 101,
+    "nombre": "Teclado Mecánico RGB",
+    "sku": "TEC-RGB-001",
+    "precio": 89.99,
+    "stock": 45,
+    "categoria": "Periféricos"
+  },
+  {
+    "id": 102,
+    "nombre": "Monitor Curvo 27 pulgadas",
+    "sku": "MON-CUR-027",
+    "precio": 299.5,
+    "stock": 25,
+    "categoria": "Monitores"
+  },
+  {
+    "id": 103,
+    "nombre": "Ratón Inalámbrico Ergonómico",
+    "sku": "RAT-ERG-003",
+    "precio": 45.0,
+    "stock": 80,
+    "categoria": "Periféricos"
+  },
+  {
+    "id": 104,
+    "nombre": "Silla Gaming Pro",
+    "sku": "SIL-GAM-PRO",
+    "precio": 250.0,
+    "stock": 15,
+    "categoria": "Mobiliario"
+  },
+  {
+    "id": 105,
+    "nombre": "Webcam HD 1080p",
+    "sku": "CAM-HD-1080",
+    "precio": 65.75,
+    "stock": 60,
+    "categoria": "Periféricos"
+  },
+  {
+    "id": "p_extra_01",
+    "nombre": "Auriculares Wireless X200",
+    "precio": 59.99,
+    "stock": 45,
+    "categoria": "Electrónica",
+    "descripcion": "Auriculares Bluetooth con cancelación de ruido y 20h de batería."
+  },
+  {
+    "id": "p_extra_02",
+    "nombre": "Cafetera Espresso Mini",
+    "precio": 89.5,
+    "stock": 12,
+    "categoria": "Hogar",
+    "descripcion": "Cafetera compacta de 15 bares para espresso y cappuccino."
+  },
+  {
+    "id": "p_extra_03",
+    "nombre": "Cuaderno Profesional A5",
+    "precio": 7.25,
+    "stock": 120,
+    "categoria": "Oficina",
+    "descripcion": "Cuaderno de tapa dura, 200 páginas rayadas."
+  }
+]
