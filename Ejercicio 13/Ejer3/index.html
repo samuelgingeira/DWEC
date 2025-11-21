@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gestión Usuarios - Calificaciones</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Gestión de Usuarios con Calificaciones</h1>
+
+    <div class="topbar">
+      <div class="controls">
+        <button id="loadInitialBtn">Cargar Usuarios Iniciales</button>
+        <button id="refreshBtn">Refrescar</button>
+      </div>
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Buscar por nombre o apellidos" />
+      </div>
+    </div>
+
+    <div id="messages" aria-live="polite"></div>
+
+    <section class="form-section">
+      <h2 id="formTitle">Añadir Usuario</h2>
+      <form id="userForm" novalidate>
+        <input type="hidden" id="userId" />
+        <div class="field">
+          <label for="firstName">Nombre</label>
+          <input id="firstName" name="firstName" type="text" required />
+          <div class="error" id="err-firstName"></div>
+        </div>
+        <div class="field">
+          <label for="lastName">Apellidos</label>
+          <input id="lastName" name="lastName" type="text" required />
+          <div class="error" id="err-lastName"></div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+          <div class="error" id="err-email"></div>
+        </div>
+        <div class="field">
+          <label for="picture">URL de la foto</label>
+          <input id="picture" name="picture" type="url" required />
+          <div class="error" id="err-picture"></div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="submitBtn">Añadir</button>
+          <button type="button" id="cancelEditBtn" hidden>Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <h2>Usuarios</h2>
+      <div id="loading" hidden>...</div>
+      <table>
+        <thead>
+          <tr><th>Foto</th><th>Nombre</th><th>Apellidos</th><th>Email</th><th>Calificaciones</th><th>Acciones</th></tr>
+        </thead>
+        <tbody id="usersTbody"></tbody>
+      </table>
+    </section>
+
+    <div id="gradesModal" class="modal" hidden>
+      <div class="modal-content">
+        <h3 id="gradesTitle">Calificaciones - </h3>
+        <form id="gradesForm">
+          <div class="grade-field"><label>Matemáticas <input type="number" id="g-math" min="0" max="10" step="0.1" /></label><div class="error" id="err-g-math"></div></div>
+          <div class="grade-field"><label>Historia <input type="number" id="g-history" min="0" max="10" step="0.1" /></label><div class="error" id="err-g-history"></div></div>
+          <div class="grade-field"><label>Ciencia <input type="number" id="g-science" min="0" max="10" step="0.1" /></label><div class="error" id="err-g-science"></div></div>
+          <div class="grade-field"><label>Inglés <input type="number" id="g-english" min="0" max="10" step="0.1" /></label><div class="error" id="err-g-english"></div></div>
+          <div class="grade-field"><label>Arte <input type="number" id="g-art" min="0" max="10" step="0.1" /></label><div class="error" id="err-g-art"></div></div>
+          <div class="form-actions">
+            <button type="submit" id="saveGradesBtn">Guardar Calificaciones</button>
+            <button type="button" id="clearGradesBtn">Borrar Calificaciones</button>
+            <button type="button" id="closeGradesBtn">Cerrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
