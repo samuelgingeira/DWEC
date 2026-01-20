@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Kanban</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Tablero Kanban</h1>
+<div class="board">
+<div class="column" data-status="todo"><h2>Por hacer</h2>
+<div class="card" draggable="true" id="task1">Tarea 1</div>
+<div class="card" draggable="true" id="task2">Tarea 2</div>
+</div>
+<div class="column" data-status="doing"><h2>En progreso</h2></div>
+<div class="column" data-status="done"><h2>Finalizado</h2></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
