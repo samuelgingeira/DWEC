@@ -1,0 +1,29 @@
+
+body { font-family: Arial, sans-serif; background:#f4f6f8; padding:20px; }
+h1 { text-align:center; }
+
+.contenedor {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:white; border-radius:15px; padding:20px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  border-top:5px solid #2563eb;
+}
+
+.contador {
+  font-family: monospace;
+  font-size:18px;
+  margin:15px 0;
+  padding:10px;
+  background:#f1f5f9;
+  border-radius:10px;
+  text-align:center;
+}
+
+.finalizado { color:red; font-weight:bold; text-align:center; }
+input { padding:8px; width:120px; }
+button { padding:8px 12px; background:#2563eb; color:white; border:none; border-radius:6px; }

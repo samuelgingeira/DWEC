@@ -1,0 +1,6 @@
+
+ID:9920-9920 USER:marcos_rivas Consumo: 125000 OK
+ID:3310-3310 USER:ana.garcia Consumo: 566500000 ERROR
+ID:4455-4455 USER:j_gomez Consumo: 0 OK
+ID:1122-1122 USER:lorenzo_pena Consumo: 996147200 OK
+ID:5566-5566 USER:marta.sanz Consumo: 0 ERROR

@@ -1,0 +1,27 @@
+
+body { font-family: Arial, sans-serif; background:#f4f6f8; padding:20px; }
+h1 { text-align:center; }
+
+.resumen {
+  background:white; padding:20px; border-radius:12px;
+  text-align:center; margin-bottom:20px;
+}
+
+.total { color:#27ae60; font-size:22px; font-weight:bold; }
+
+table {
+  width:100%; background:white; border-collapse:collapse;
+  border-radius:12px; overflow:hidden;
+}
+
+th { background:#2c3e50; color:white; padding:12px; }
+td { padding:10px; border-bottom:1px solid #ddd; }
+
+tr.error { background:#fdecea; }
+
+.estado-ok {
+  background:#27ae60; color:white; padding:4px 10px; border-radius:6px;
+}
+.estado-error {
+  background:#c0392b; color:white; padding:4px 10px; border-radius:6px;
+}
