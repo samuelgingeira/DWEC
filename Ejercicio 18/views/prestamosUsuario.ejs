@@ -1,0 +1,17 @@
+<h1>Libros prestados a: <%= nombre %></h1>
+
+<table>
+  <tr>
+    <th>Título</th>
+    <th>Autor</th>
+    <th>Fecha devolución</th>
+  </tr>
+
+  <% prestamos.forEach(p => { %>
+    <tr>
+      <td><%= p.titulo %></td>
+      <td><%= p.autor %></td>
+      <td><%= p.fecha_devolucion %></td>
+    </tr>
+  <% }) %>
+</table>

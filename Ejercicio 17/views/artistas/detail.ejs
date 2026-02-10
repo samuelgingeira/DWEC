@@ -1,0 +1,20 @@
+<h1><%= artista.nombre %></h1>
+
+<img src="<%= artista.foto %>" width="150">
+
+<p><strong>País:</strong> <%= artista.pais %></p>
+<p><strong>Género:</strong> <%= artista.genero %></p>
+<p><strong>Año formación:</strong> <%= artista.fecha_formacion %></p>
+
+<h2>Álbumes</h2>
+
+<ul>
+  <% albumes.forEach(album => { %>
+    <li style="margin-bottom:10px;">
+      <img src="<%= album.foto %>" width="50">
+      <strong><%= album.titulo %></strong> (<%= album.anio %>)
+    </li>
+  <% }) %>
+</ul>
+
+<a class="btn" href="/artistas">Volver</a>

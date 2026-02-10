@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 6px 10px;
+  background: #0066cc;
+  color: white;
+  border-radius: 4px;
+}
+
+.btn-danger {
+  background: #cc0000;
+}
+
+.error {
+  color: red;
+}

@@ -1,0 +1,13 @@
+<h1>Prestar Libro</h1>
+
+<form method="POST" action="/prestamo/nuevo">
+  <input type="hidden" name="libro_id" value="<%= libro_id %>">
+
+  <label>Nombre prestatario</label>
+  <input type="text" name="nombre" required>
+
+  <label>Fecha devolución</label>
+  <input type="date" name="fecha_devolucion" required>
+
+  <button>Prestar</button>
+</form>
