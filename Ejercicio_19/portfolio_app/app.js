@@ -101,6 +101,7 @@ app.listen(PORT, () => {
     console.log("Servidor funcionando");
 });
 
+
 function authMiddleware(req, res, next) {
 
     if (!req.session.user) {
