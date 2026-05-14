@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <h1>Dashboard</h1>
+
+    <h2>Bienvenido <%= user.username %></h2>
+
+    <p>Email: <%= user.email %></p>
+
+    <a href="/logout">Cerrar sesión</a>
+
+    <hr>
+
+    <!-- ===================== -->
+    <!-- EDITAR PERFIL -->
+    <!-- ===================== -->
+
+    <h2>Editar perfil</h2>
+
+    <form action="/profile/update" method="POST">
+
+        <textarea
+            name="bio"
+            placeholder="Biografía"
+        ><%= user.bio || '' %></textarea>
+
+        <br><br>
+
+        <input
+            type="email"
+            name="email"
+            value="<%= user.email %>"
+        >
+
+        <br><br>
+
+        <button type="submit">
+            Actualizar perfil
+        </button>
+
+    </form>
+
+    <hr>
+
+    <!-- ===================== -->
+    <!-- PROYECTOS -->
+    <!-- ===================== -->
+
+    <h2>Mis proyectos</h2>
+
+    <% projects.forEach(project => { %>
+
+        <div style="border:1px solid black; margin:10px; padding:10px;">
+
+            <h3><%= project.title %></h3>
+
+            <p><%= project.description %></p>
+
+            <a href="<%= project.repo_url %>">
+                Repositorio
+            </a>
+
+            <br>
+
+            <a href="<%= project.live_url %>">
+                Demo
+            </a>
+
+            <form action="/projects/delete/<%= project.id %>" method="POST">
+
+                <button type="submit">
+                    Borrar proyecto
+                </button>
+
+            </form>
+
+        </div>
+
+    <% }) %>
+
+
+    <h2>Nuevo proyecto</h2>
+
+    <form action="/projects/create" method="POST">
+
+        <input type="text" name="title" placeholder="Título" required>
+
+        <br><br>
+
+        <textarea
+            name="description"
+            placeholder="Descripción"
+        ></textarea>
+
+        <br><br>
+
+        <input
+            type="text"
+            name="repo_url"
+            placeholder="GitHub URL"
+        >
+
+        <br><br>
+
+        <input
+            type="text"
+            name="live_url"
+            placeholder="Demo URL"
+        >
+
+        <br><br>
+
+        <button type="submit">
+            Crear proyecto
+        </button>
+
+    </form>
+
+    <hr>
+
+    <!-- ===================== -->
+    <!-- SOCIAL LINKS -->
+    <!-- ===================== -->
+
+    <h2>Mis redes sociales</h2>
+
+    <% socialLinks.forEach(link => { %>
+
+        <div style="border:1px solid blue; margin:10px; padding:10px;">
+
+            <h3><%= link.platform %></h3>
+
+            <a href="<%= link.url %>">
+                <%= link.url %>
+            </a>
+
+            <form action="/social-links/delete/<%= link.id %>" method="POST">
+
+                <button type="submit">
+                    Borrar red social
+                </button>
+
+            </form>
+
+        </div>
+
+    <% }) %>
+
+
+    <h2>Nueva red social</h2>
+
+    <form action="/social-links/create" method="POST">
+
+        <input
+            type="text"
+            name="platform"
+            placeholder="GitHub"
+            required
+        >
+
+        <br><br>
+
+        <input
+            type="text"
+            name="url"
+            placeholder="https://github.com/..."
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">
+            Añadir red social
+        </button>
+
+    </form>
+
+</body>
+</html>
