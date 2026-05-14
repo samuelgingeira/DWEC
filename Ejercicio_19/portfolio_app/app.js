@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const session = require("express-session");
 const path = require("path");
@@ -11,23 +13,30 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(session({
-    secret: "portfolio_secret",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false
 }));
 
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
+function authMiddleware(req, res, next) {
+
+    if (!req.session.user) {
+        return res.redirect("/login");
+    }
+
+    next();
+}
 
 app.get("/", (req, res) => {
     res.send("Servidor funcionando");
 });
 
-
 app.get("/register", (req, res) => {
     res.render("register");
 });
-
 
 app.post("/register", (req, res) => {
 
@@ -50,16 +59,14 @@ app.post("/register", (req, res) => {
                 return res.send("Error al registrar");
             }
 
-            res.send("Usuario registrado");
+            res.redirect("/login");
         }
     );
 });
 
-
 app.get("/login", (req, res) => {
     res.render("login");
 });
-
 
 app.post("/login", (req, res) => {
 
@@ -86,36 +93,25 @@ app.post("/login", (req, res) => {
                 return res.send("Credenciales incorrectas");
             }
 
-            // Guardar usuario en sesión
             req.session.user = results[0];
 
-            res.send("Login correcto");
+            res.redirect("/dashboard");
         }
     );
 });
 
+app.get("/logout", (req, res) => {
 
-const PORT = process.env.PORT || 3000;
+    req.session.destroy(() => {
+        res.redirect("/login");
+    });
 
-app.listen(PORT, () => {
-    console.log("Servidor funcionando");
 });
-
-
-function authMiddleware(req, res, next) {
-
-    if (!req.session.user) {
-        return res.redirect("/login");
-    }
-
-    next();
-}
 
 app.get("/dashboard", authMiddleware, (req, res) => {
 
     const userId = req.session.user.id;
 
-    // Obtener proyectos
     const projectsSql = `
         SELECT * FROM projects
         WHERE user_id = ?
@@ -142,8 +138,8 @@ app.get("/dashboard", authMiddleware, (req, res) => {
 
             res.render("dashboard", {
                 user: req.session.user,
-                projects: projects,
-                socialLinks: socialLinks
+                projects,
+                socialLinks
             });
 
         });
@@ -152,11 +148,41 @@ app.get("/dashboard", authMiddleware, (req, res) => {
 
 });
 
+app.post("/profile/update", authMiddleware, (req, res) => {
+
+    const { bio, email } = req.body;
+
+    const userId = req.session.user.id;
+
+    const sql = `
+        UPDATE users
+        SET bio = ?, email = ?
+        WHERE id = ?
+    `;
+
+    connection.query(
+        sql,
+        [bio, email, userId],
+        (err, result) => {
+
+            if (err) {
+                console.log(err);
+                return res.send("Error");
+            }
+
+            req.session.user.bio = bio;
+            req.session.user.email = email;
+
+            res.redirect("/dashboard");
+        }
+    );
+
+});
+
 app.post("/projects/create", authMiddleware, (req, res) => {
 
     const { title, description, repo_url, live_url } = req.body;
 
-    // Usuario logueado
     const userId = req.session.user.id;
 
     const sql = `
@@ -172,20 +198,12 @@ app.post("/projects/create", authMiddleware, (req, res) => {
 
             if (err) {
                 console.log(err);
-                return res.send("Error al crear proyecto");
+                return res.send("Error");
             }
 
             res.redirect("/dashboard");
         }
     );
-
-});
-
-app.get("/logout", (req, res) => {
-
-    req.session.destroy(() => {
-        res.redirect("/login");
-    });
 
 });
 
@@ -207,7 +225,7 @@ app.post("/projects/delete/:id", authMiddleware, (req, res) => {
 
             if (err) {
                 console.log(err);
-                return res.send("Error al borrar");
+                return res.send("Error");
             }
 
             res.redirect("/dashboard");
@@ -243,9 +261,6 @@ app.post("/social-links/create", authMiddleware, (req, res) => {
 
 });
 
-
-
-
 app.post("/social-links/delete/:id", authMiddleware, (req, res) => {
 
     const linkId = req.params.id;
@@ -273,7 +288,6 @@ app.post("/social-links/delete/:id", authMiddleware, (req, res) => {
 
 });
 
-
 app.get("/portfolio/:username", (req, res) => {
 
     const username = req.params.username;
@@ -296,7 +310,6 @@ app.get("/portfolio/:username", (req, res) => {
 
         const portfolioUser = users[0];
 
-        // Obtener proyectos
         const projectsSql = `
             SELECT * FROM projects
             WHERE user_id = ?
@@ -349,34 +362,8 @@ app.get("/portfolio/:username", (req, res) => {
 
 });
 
-app.post("/profile/update", authMiddleware, (req, res) => {
+const PORT = process.env.PORT || 3000;
 
-    const { bio, email } = req.body;
-
-    const userId = req.session.user.id;
-
-    const sql = `
-        UPDATE users
-        SET bio = ?, email = ?
-        WHERE id = ?
-    `;
-
-    connection.query(
-        sql,
-        [bio, email, userId],
-        (err, result) => {
-
-            if (err) {
-                console.log(err);
-                return res.send("Error");
-            }
-
-            // Actualizar sesión
-            req.session.user.bio = bio;
-            req.session.user.email = email;
-
-            res.redirect("/dashboard");
-        }
-    );
-
+app.listen(PORT, () => {
+    console.log("Servidor funcionando");
 });

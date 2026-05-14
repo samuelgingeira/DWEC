@@ -5,67 +5,61 @@
 </head>
 <body>
 
-    <h1><%= portfolioUser.username %></h1>
+<h1><%= portfolioUser.username %></h1>
 
-    <p><%= portfolioUser.bio %></p>
+<p><%= portfolioUser.bio %></p>
 
-    <p>Email: <%= portfolioUser.email %></p>
+<p>Email: <%= portfolioUser.email %></p>
 
-    <% if (isOwner) { %>
+<% if (isOwner) { %>
 
-        <a href="/dashboard">
-            Gestionar mi portafolio
-        </a>
+<a href="/dashboard">Gestionar mi portafolio</a>
 
-    <% } %>
+<% } %>
 
-    <hr>
+<hr>
 
+<h2>Redes sociales</h2>
 
+<% socialLinks.forEach(link => { %>
 
-    <h2>Redes sociales</h2>
+<div>
 
-    <% socialLinks.forEach(link => { %>
+    <strong><%= link.platform %></strong>
 
-        <div>
+    <a href="<%= link.url %>">
+        <%= link.url %>
+    </a>
 
-            <strong><%= link.platform %></strong>
+</div>
 
-            <a href="<%= link.url %>">
-                <%= link.url %>
-            </a>
+<% }) %>
 
-        </div>
+<hr>
 
-    <% }) %>
+<h2>Proyectos</h2>
 
-    <hr>
+<% projects.forEach(project => { %>
 
+<div style="border:1px solid black; margin:10px; padding:10px;">
 
+    <h3><%= project.title %></h3>
 
-    <h2>Proyectos</h2>
+    <p><%= project.description %></p>
 
-    <% projects.forEach(project => { %>
+    <a href="<%= project.repo_url %>">
+        Repositorio
+    </a>
 
-        <div style="border:1px solid black; margin:10px; padding:10px;">
+    <br>
 
-            <h3><%= project.title %></h3>
+    <a href="<%= project.live_url %>">
+        Demo
+    </a>
 
-            <p><%= project.description %></p>
+</div>
 
-            <a href="<%= project.repo_url %>">
-                Repositorio
-            </a>
-
-            <br>
-
-            <a href="<%= project.live_url %>">
-                Demo
-            </a>
-
-        </div>
-
-    <% }) %>
+<% }) %>
 
 </body>
 </html>
